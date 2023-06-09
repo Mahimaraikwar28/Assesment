@@ -54,9 +54,11 @@ Total Items Sold in Marketing
 
 4.Then we are checking a if condition in which we are extracting month which is betweren july(7) and september(9), if the condition is true then the code inside if is executed.
 
-5.Then we are incrementing the value of 'count' by 1 for each object in the 'results'.
+5.Then we have applied an if condition where we are checking if the department is marketing.
 
-6.`res.json({"total_items": count});`: This line sends a JSON response back to the client with a single property `"total_items"` containing the value of the `count` variable.
+6.Then we are incrementing the value of 'count' by 1 for each object in the 'results'.
+
+7.`res.json({"total_items": count});`: This line sends a JSON response back to the client with a single property `"total_items"` containing the value of the `count` variable.
 
 ### Conclusion: The above code calculates the total number of items that have a date between july and september in the 'results' array.
 
@@ -93,7 +95,7 @@ Total Items Sold in Marketing
 
 ### Code Explaination: 
 
-1.Initialize an empty object 'frequencymap', it is used to store the frequency count of software names.
+1.Initialize an empty object 'softwaremap', it is used to store the frequency count of software names.
 
 2.Iterate a loop over the 'results' array.Array name results contains a 'date' property and a 'software' property.
 
@@ -101,15 +103,15 @@ Total Items Sold in Marketing
 
 4.Then we are providing the if condition which checks whether the extracted month is in between october(10) and december(12),if the condition is true the code inside the if statement is executed.
 
-5.'frequencymap[results[i].software] = (frequencymap[results[i].software] || 0) + 1;`: This line increments the frequency count of the `software` name in the `frequencymap` object. If the `software` name does not exist in the `frequencymap`, it is initialized to 0 before incrementing.
+5.'softwaremap[results[i].software] = (softwaremap[results[i].software] || 0) + 1;`: This line increments the frequency count of the `software` name in the `softwaremap` object. If the `software` name does not exist in the `softwaremap`, it is initialized to 0 before incrementing.
 
-6.Then we are converting the 'frequencymap' object into an array of key value pair using 'Object.entries()' method.
+6.Then we are converting the 'softwaremap' object into an array of key value pair using 'Object.entries()' method.
 
-7.Then we are sorting 'name1' array in descending order on the frequency count (['1']) of each entry.
+7.Then we are sorting 'Software1' array in descending order on the frequency count (['1']) of each entry.
 
-8.`name1 = name1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `name1` array (since array indices start *at 0) and assigns it to the `name1` variable.
+8.`software1 = software1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `software1` array (since array indices start *at 0) and assigns it to the `software1` variable.
 
-9.`res.json({"software1": name1, "software2": name2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
+9.`res.json({"software1": software1, "software2": software2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
 
 ### Conclusion: The above explaination provides a way to determine the software names with specific frequency ranks based on the provided date ranges.
 
@@ -145,13 +147,13 @@ Percentage of Department-wise Sold Items
 
 3.Then we are running a loop over the 'results' array.'Results' array contains object with property name 'department' and 'seats'.
 
-4.`frequencymap[results[i].department] = Number(frequencymap[results[i].department] || results[i].seats) + Number([results[i].seats])`: It will increment the frequency count of items in the 'frequencymap' object.If the `department` does not exist in the `frequencymap`, it initializes it with the value of `results[i].seats`. It then adds the value of `results[i].seats` to the existing count.
+4.`departmentmap[results[i].department] = Number(departmentmap[results[i].department] || results[i].seats) + Number([results[i].seats])`: It will increment the frequency count of items in the 'departmentmap' object.If the `department` does not exist in the `departmentmap`, it initializes it with the value of `results[i].seats`. It then adds the value of `results[i].seats` to the existing count.
 
 5.Then we are calculating the total_count of sold items by adding the values of `results[i].seats` to the `total_count` variable.
 
 6.Then we are returning the 'total_count' value to the console.
 
-7.`for (let key in frequencymap) { ... }`: This is a loop that iterates over the departments in the `frequencymap` object.
+7.`for (let key in Departmentmap) { ... }`: This is a loop that iterates over the departments in the `Departmentmap` object.
 
 8.Then we are calculating the percentage of the sold items by diving the frequency count of the department by the 'total_count' and multiplying it by 100 then we are  rounding the result to 2 decimal points.
 
