@@ -32,7 +32,9 @@ Total Items Sold in Marketing
 * Method: GET
 * Parameters:
 1.start_date: Start date of the quarter (e.g., "2023-07-01").
+
 2.end_date: End date of the quarter (e.g., "2023-09-30").
+
 3.department: Department name.
 * Response: Returns an integer representing the total items sold.
 
