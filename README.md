@@ -70,7 +70,9 @@ API Use Cases:
 1.What is the 2nd most sold item in terms of quantity sold in q4,
 
 2.What is the fourth most sold item in terms of Total price in q2?
+
 Expected O/P: returns string name
+
 Parameters: { item_by: ("quantity" | | "price"), start_date: DATE, end_date:
 DATE, n:integer }
 
@@ -116,8 +118,11 @@ Conclusion: The above explaination provides a way to determine the software name
 
 End point : /api/percentage_of_department_wise_sold_items
 API Use Cases:
+
 1.What is the percentage of sold items (seats) department wise?
+
 Expected O/P: {dept_name: x%,....... }
+
 Parameters: {start_date: Date, end_date: Date}
 
  Sol: 
@@ -130,3 +135,25 @@ Percentage of Department-wise Sold Items
     end_date (string, required): End date of the period.
 
 * Response: Returns an object with department-wise sold item percentages.
+
+### Code Explaination: 
+
+1.Initializes an empty object called `frequencymap` and a variable `total_count` to keep track of the total count of sold items.
+
+2.Then we have a variable total_count which is initialize to o and it will keep track of sold items.
+
+3.Then we are running a loop over the 'results' array.'Results' array contains object with property name 'department' and 'seats'.
+
+4.`frequencymap[results[i].department] = Number(frequencymap[results[i].department] || results[i].seats) + Number([results[i].seats])`: It will increment the frequency count of items in the 'frequencymap' object.If the `department` does not exist in the `frequencymap`, it initializes it with the value of `results[i].seats`. It then adds the value of `results[i].seats` to the existing count.
+
+5.Then we are calculating the total_count of sold items by adding the values of `results[i].seats` to the `total_count` variable.
+
+6.Then we are returning the 'total_count' value to the console.
+
+7. `for (let key in frequencymap) { ... }`: This is a loop that iterates over the departments in the `frequencymap` object.
+
+8.Then we are calculating the percentage of the sold items by diving the frequency count of the department by the 'total_count' and multiplying it by 100 then we are  rounding the result to 2 decimal points.
+
+9.Then we are sending the JSON response to the client.
+
+Conclusion: This will calculates the percentage of sold items per department and returns the result as a JSON response.
