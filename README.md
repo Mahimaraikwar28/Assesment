@@ -36,11 +36,11 @@ Total Items Sold in Marketing
 * Method: GET
 * Parameters:
 
-1.start_date: Start date of the quarter (e.g., "2023-07-01").
+    start_date: Start date of the quarter (e.g., "2023-07-01").
 
-2.end_date: End date of the quarter (e.g., "2023-09-30").
+    end_date: End date of the quarter (e.g., "2023-09-30").
 
-3.department: Department name.
+    department: Department name.
 * Response: Returns an integer representing the total items sold.
 
 ### Code Explaination:
@@ -79,13 +79,13 @@ Sol:
 * Method: GET
 * Parameters:
 
-1.item_by: Type of ranking ("quantity" or "price").
+    item_by: Type of ranking ("quantity" or "price").
 
-2.start_date: Start date of the quarter (e.g., "2023-10-01").
+    start_date: Start date of the quarter (e.g., "2023-10-01").
 
-3.end_date: End date of the quarter (e.g., "2023-12-31").
+    end_date: End date of the quarter (e.g., "2023-12-31").
 
-4.n : Position of the item in the ranking.
+    n : Position of the item in the ranking.
 
 * Response: Returns the name of the item.
 
@@ -110,3 +110,23 @@ Sol:
 9.`res.json({"software1": name1, "software2": name2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
 
 Conclusion: The above explaination provides a way to determine the software names with specific frequency ranks based on the provided date ranges.
+
+
+## Api 3:
+
+End point : /api/percentage_of_department_wise_sold_items
+API Use Cases:
+1.What is the percentage of sold items (seats) department wise?
+Expected O/P: {dept_name: x%,....... }
+Parameters: {start_date: Date, end_date: Date}
+
+ Sol: 
+Percentage of Department-wise Sold Items
+* Endpoint: /api/percentage_of_department_wise_sold_items
+* Method: GET
+* Parameters:
+    start_date (string, required): Start date of the period.
+
+    end_date (string, required): End date of the period.
+
+* Response: Returns an object with department-wise sold item percentages.
