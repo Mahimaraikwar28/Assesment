@@ -107,7 +107,7 @@ Total Items Sold in Marketing
 
 7.Then we are sorting 'name1' array in descending order on the frequency count (['1']) of each entry.
 
-8. `name1 = name1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `name1` array (since array indices start *at 0) and assigns it to the `name1` variable.
+8.`name1 = name1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `name1` array (since array indices start *at 0) and assigns it to the `name1` variable.
 
 9.`res.json({"software1": name1, "software2": name2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
 
@@ -151,7 +151,7 @@ Percentage of Department-wise Sold Items
 
 6.Then we are returning the 'total_count' value to the console.
 
-7. `for (let key in frequencymap) { ... }`: This is a loop that iterates over the departments in the `frequencymap` object.
+7.`for (let key in frequencymap) { ... }`: This is a loop that iterates over the departments in the `frequencymap` object.
 
 8.Then we are calculating the percentage of the sold items by diving the frequency count of the department by the 'total_count' and multiplying it by 100 then we are  rounding the result to 2 decimal points.
 
