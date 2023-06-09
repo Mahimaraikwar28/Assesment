@@ -31,7 +31,7 @@ The server will start running on http://localhost:3000 by default.
 ### Expected O/P: returns integer
 ### Parameters: {start_date: DATE, end_date: DATE, department: string}
 
-Sol: 
+### Sol: 
 Total Items Sold in Marketing
 * Endpoint: /api/total_items
 * Method: GET
@@ -76,7 +76,7 @@ Conclusion: The above code calculates the total number of items that have a date
 
 ### Parameters: { item_by: ("quantity" | | "price"), start_date: DATE, end_date:DATE, n:integer }
 
-Sol:
+### Sol:
 * Endpoint: /api/nth_most_total_item
 * Method: GET
 * Parameters:
@@ -126,7 +126,7 @@ Conclusion: The above explaination provides a way to determine the software name
 
 ### Parameters: {start_date: Date, end_date: Date}
 
- Sol: 
+### Sol: 
 Percentage of Department-wise Sold Items
 * Endpoint: /api/percentage_of_department_wise_sold_items
 * Method: GET
