@@ -31,6 +31,7 @@ Total Items Sold in Marketing
 * Endpoint: /api/total_items
 * Method: GET
 * Parameters:
+
 1.start_date: Start date of the quarter (e.g., "2023-07-01").
 
 2.end_date: End date of the quarter (e.g., "2023-09-30").
@@ -59,22 +60,30 @@ Conclusion: The above code calculates the total number of items that have a date
 ## Api 2:
 
 End point : /api/nth_most_total_item ,
+
 API Use Cases:
+
 1.What is the 2nd most sold item in terms of quantity sold in q4,
+
 2.What is the fourth most sold item in terms of Total price in q2?
 Expected O/P: returns string name
 Parameters: { item_by: ("quantity" | | "price"), start_date: DATE, end_date:
-
 DATE, n:integer }
 
-Sol:Endpoint: /api/nth_most_total_item
-Method: GET
-Parameters:
-item_by: Type of ranking ("quantity" or "price").
-start_date: Start date of the quarter (e.g., "2023-10-01").
-end_date: End date of the quarter (e.g., "2023-12-31").
-n : Position of the item in the ranking.
-Response: Returns the name of the item.
+Sol:
+* Endpoint: /api/nth_most_total_item
+* Method: GET
+* Parameters:
+
+1.item_by: Type of ranking ("quantity" or "price").
+
+2.start_date: Start date of the quarter (e.g., "2023-10-01").
+
+3.end_date: End date of the quarter (e.g., "2023-12-31").
+
+4.n : Position of the item in the ranking.
+
+* Response: Returns the name of the item.
 
 ### Code Explaination: 
 
@@ -92,7 +101,7 @@ Response: Returns the name of the item.
 
 7.Then we are sorting 'name1' array in descending order on the frequency count (['1']) of each entry.
 
-8. `name1 = name1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `name1` array (since array indices start at 0) and assigns it to the `name1` variable.
+8. `name1 = name1[1][0];`: This line retrieves the software name from the second entry (`[1]`) in the `name1` array (since array indices start *at 0) and assigns it to the `name1` variable.
 
 9.`res.json({"software1": name1, "software2": name2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
 
