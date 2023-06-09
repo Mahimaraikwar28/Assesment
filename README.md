@@ -24,11 +24,12 @@ The server will start running on http://localhost:3000 by default.
 
 ## Api 1:
 
-End point : /api/total_items ,
-API Use Cases :
-1. Total item (total seats) sold in Marketting for last in q3 of the year?
-Expected O/P: returns integer
-Parameters: {start_date: DATE, end_date: DATE, department: string}
+### End point : /api/total_items ,
+### API Use Cases :
+
+### Total item (total seats) sold in Marketting for last in q3 of the year?
+### Expected O/P: returns integer
+### Parameters: {start_date: DATE, end_date: DATE, department: string}
 
 Sol: 
 Total Items Sold in Marketing
@@ -63,18 +64,17 @@ Conclusion: The above code calculates the total number of items that have a date
 
 ## Api 2:
 
-End point : /api/nth_most_total_item ,
+### End point : /api/nth_most_total_item ,
 
-API Use Cases:
+### API Use Cases:
 
-1.What is the 2nd most sold item in terms of quantity sold in q4,
+### 1.What is the 2nd most sold item in terms of quantity sold in q4,
 
-2.What is the fourth most sold item in terms of Total price in q2?
+### 2.What is the fourth most sold item in terms of Total price in q2?
 
-Expected O/P: returns string name
+### Expected O/P: returns string name
 
-Parameters: { item_by: ("quantity" | | "price"), start_date: DATE, end_date:
-DATE, n:integer }
+### Parameters: { item_by: ("quantity" | | "price"), start_date: DATE, end_date:DATE, n:integer }
 
 Sol:
 * Endpoint: /api/nth_most_total_item
@@ -116,14 +116,15 @@ Conclusion: The above explaination provides a way to determine the software name
 
 ## Api 3:
 
-End point : /api/percentage_of_department_wise_sold_items
-API Use Cases:
+### End point : /api/percentage_of_department_wise_sold_items
 
-1.What is the percentage of sold items (seats) department wise?
+### API Use Cases:
 
-Expected O/P: {dept_name: x%,....... }
+### 1.What is the percentage of sold items (seats) department wise?
 
-Parameters: {start_date: Date, end_date: Date}
+### Expected O/P: {dept_name: x%,....... }
+
+### Parameters: {start_date: Date, end_date: Date}
 
  Sol: 
 Percentage of Department-wise Sold Items
