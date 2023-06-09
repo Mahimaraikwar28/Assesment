@@ -2,17 +2,21 @@
 ## Back-end Internship at Volopay
 
 ### Steps to create a new project and install node in it.
-npm init -i
-now install express by 
+1.npm init -i
+
+2.now install express by 
 node i express
-Install the required dependencies by running the following command:
+
+3.Install the required dependencies by running the following command:
 node i csv
 node i fs
-Import the card transaction dataset into your preferred database system or use it directly from the provided CSV file.
+
+4.Import the card transaction dataset into your preferred database system or use it directly from the provided CSV file.
 
 Start the server by running the following command:
 
-npm main.js
+* npm main.js
+
 The server will start running on http://localhost:3000 by default.
 
 
