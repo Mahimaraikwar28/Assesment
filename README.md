@@ -158,3 +158,46 @@ Percentage of Department-wise Sold Items
 9.Then we are sending the JSON response to the client.
 
 ### Conclusion: This will calculates the percentage of sold items per department and returns the result as a JSON response.
+
+## Api 4:
+
+### End point : /api/monthly_sales
+### API Use Cases:
+
+### How does the monthly sales for any product look like?
+
+### Expected O/P: [1908.0, ... 1952.0] for all 12
+
+### Sol:
+
+Monthly Sales for a Specific Product
+
+* Endpoint: /api/monthly_sales
+* Method: GET
+* Parameters:
+
+    product : Name of the product.
+
+    year : Year for which to retrieve the monthly sales.
+
+* Response: Returns an array of monthly sales for the product.
+
+### Code Explaination: 
+
+1.In the first line, we are extracting the software name from the object in the 'result' array and assign it to 'prod_name'.
+
+2.Then initialize an empty object 'frequencymap' which will store monthly sales data.
+
+3.Then we are extracting year portion from the 'date' property using substring method to extract first-11 character.
+
+4.`let name = results[i].software`: This line extracts the `software` name from the `software` property of each object in the `results` array and assigns it to the `name` variable.
+
+5.Then we are checking a condition that if the extracted year matches the 'prod_date' if condition is true then the if will execute.
+
+6.Then we are calculating the sales amount for each month by multiplying the seats and amount properties and adding the result to the existing sales amount in the 'frequencymap' object.
+
+7.Then we are pushing the sales ampount for each month.
+
+8.Then we are sending Json response to the client containing the software name ,product year and array of the sales.
+
+### Conclusion:This will calculates and returns the monthly sales data for a specific software and year.
