@@ -58,7 +58,7 @@ Total Items Sold in Marketing
 
 6.`res.json({"total_items": count});`: This line sends a JSON response back to the client with a single property `"total_items"` containing the value of the `count` variable.
 
-Conclusion: The above code calculates the total number of items that have a date between july and september in the 'results' array.
+### Conclusion: The above code calculates the total number of items that have a date between july and september in the 'results' array.
 
 
 
@@ -111,7 +111,7 @@ Conclusion: The above code calculates the total number of items that have a date
 
 9.`res.json({"software1": name1, "software2": name2});`: This line sends a JSON response back to the client.The value of the property are software name with second highest frequency count and fourth highest frequency count.
 
-Conclusion: The above explaination provides a way to determine the software names with specific frequency ranks based on the provided date ranges.
+### Conclusion: The above explaination provides a way to determine the software names with specific frequency ranks based on the provided date ranges.
 
 
 ## Api 3:
@@ -157,4 +157,4 @@ Percentage of Department-wise Sold Items
 
 9.Then we are sending the JSON response to the client.
 
-Conclusion: This will calculates the percentage of sold items per department and returns the result as a JSON response.
+### Conclusion: This will calculates the percentage of sold items per department and returns the result as a JSON response.
