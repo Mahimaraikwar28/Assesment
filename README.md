@@ -27,14 +27,14 @@ Expected O/P: returns integer
 Parameters: {start_date: DATE, end_date: DATE, department: string}
 
 Sol: 
-1. Total Items Sold in Marketing
-Endpoint: /api/total_items
-Method: GET
-Parameters:
-start_date: Start date of the quarter (e.g., "2023-07-01").
-end_date: End date of the quarter (e.g., "2023-09-30").
-department: Department name.
-Response: Returns an integer representing the total items sold.
+Total Items Sold in Marketing
+* Endpoint: /api/total_items
+* Method: GET
+* Parameters:
+1.start_date: Start date of the quarter (e.g., "2023-07-01").
+2.end_date: End date of the quarter (e.g., "2023-09-30").
+3.department: Department name.
+* Response: Returns an integer representing the total items sold.
 
 ### Code Explaination:
 
